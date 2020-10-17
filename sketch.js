@@ -3,8 +3,9 @@ let bullet;
 let stars = [];
 let gems = [];
 
-let isPC = false;
+let isPC = false; //for computers
 
+//images
 let pointimg;
 let bulletimg = [];
 let spepointimg;
@@ -12,7 +13,7 @@ let healthimg;
 let nonhealthimg;
 let shipimg = [];
 
-
+//sounds
 let success;
 let pling;
 let snap;
@@ -22,12 +23,14 @@ let losetrack;
 let scl; //scaling
 let isPlaying = false;
 
-let playpausebtn, restartbtn;
+let playpausebtn, restartbtn; //buttons
 
-let bgbody;
+let bgbody; //for background
 
-let starmin, starmax;
+let starmin, starmax; //size of obstacles
 let sml; //width or height whichever is small
+
+let n = 1;
 
 
 function preload() {
@@ -112,17 +115,14 @@ function setup() {
   }
 
   bgbody = select('#body');
-  
+
   setbuttons();
   ship = new Ship();
   bullet = new Bullet();
-  for (let i = 0; i < 10; i++) {
 
-    stars.push(new Star(random(starmin * scl, starmax * scl)));
-  }
-  starttrack.play();
   shufflegame();
   noLoop();
+
 }
 
 function setbuttons() {
@@ -136,8 +136,8 @@ function setbuttons() {
   div.child(restartbtn);
 
   if (isPC) {
-     playpausebtn.html('\u23f5');
-  restartbtn.html('\u21ba');
+    playpausebtn.html('\u23f5');
+    restartbtn.html('\u21ba');
 
     playpausebtn.style('width:4vw; height:4vw;margin:10px auto;display: block;padding: 0.25em 0.25em;text-decoration: none;color: #FFF;background: #03A9F480;border-radius: 100%;font-weight: bold;font-size:2vw;border:none;outline: inherit;');
 
@@ -167,30 +167,32 @@ function setbuttons() {
 }
 
 function toggle() {
+
   if (isPlaying) {
 
     noLoop();
     isPlaying = false;
-    if(isPC){
-          playpausebtn.html('\u23f5');
+    if (isPC) {
+      playpausebtn.html('\u23f5');
 
-    }else{
-          playpausebtn.html('PLAY');
+    } else {
+      playpausebtn.html('PLAY');
 
     }
   } else {
     loop();
     isPlaying = true;
-     if(isPC){
-          playpausebtn.html('\u23f8');
+    if (isPC) {
+      playpausebtn.html('\u23f8');
 
-    }else{
-          playpausebtn.html('PAUSE');
+    } else {
+      playpausebtn.html('PAUSE');
+
+    }
 
   }
+}
 
-}
-}
 function shufflegame() {
 
 
@@ -393,10 +395,27 @@ function draw() {
       gems.splice(i, 1);
     }
   }
-
-
   bullet.update();
 
 
+  if (n) {
+    n--;
+    push();
+    noStroke();
+    fill(0, 250);
+    if (isPC) {
+      rect(width / 2, height / 3, 450 * width / 1080, 250 * height / 1080, 20 * scl);
+    } else {
+      rect(width / 2, height / 3, 750 * sml * scl / 1080, 350 * sml * scl / 1080, 20 * scl);
+    }
+    fill(240);
+    textAlign(CENTER, CENTER);
+    textSize(75 * scl);
+    text("MATERIAL SOUL", width / 2, height / 3.15);
+    textAlign(LEFT, CENTER);
+    textSize(30 * scl);
+    text("By Amish Ranpariya", width / 2, height / 2.75);
+    pop();
+  }
 
 }
