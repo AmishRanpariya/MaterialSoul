@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="" rel="noopener">
+  <a href="https://amishranpariya.github.io/MaterialSoul/ " rel="noopener">
  <img width=200px height=200px src="./Assets/Img/MaterialSoulLogo.png" alt="Project logo"></a>
 </p>
 <h1 align="center">Material Soul</h1>
