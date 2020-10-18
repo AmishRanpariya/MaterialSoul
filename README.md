@@ -24,10 +24,12 @@
 ## 🏁 Getting Started 
 
 - First thing first, open the https://amishranpariya.github.io/MaterialSoul/ in any of your favourite browser.
+
 <img width=50% align="center"  alt="Img" src="./Assets/ScreenShots/editor.p5js.org_AmishRanpariya_present_4E3AXHOT0(Galaxy S5).png" />
 
 - Now, Hit on the play button and and break all the records!
 
+<img width=50% align="center"  alt="Img" src="./Assets/ScreenShots/editor.p5js.org_AmishRanpariya_present_4E3AXHOT0(Moto G4) (1).png" />
 - Fun tip: Click restart to change the theme.😇
 
 ---
