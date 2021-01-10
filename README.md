@@ -32,7 +32,10 @@
 - Now, Hit on the play button and and break all the records!
 
 <p align="center">
-<img width=50% align="center"  alt="Img" src="./Assets/ScreenShots/editor.p5js.org_AmishRanpariya_present_4E3AXHOT0(Moto G4) (1).png" />
+<img width=23% align="center"  alt="Img" src="./Assets/app-mockup-4.png" />
+<img width=23% align="center"  alt="Img" src="./Assets/app-mockup-1.png" />
+<img width=23% align="center"  alt="Img" src="./Assets/app-mockup-2.png" />
+<img width=23% align="center"  alt="Img" src="./Assets/app-mockup-3.png" />
 </p>
 
 - Fun tip: Click restart to change the theme.😇
