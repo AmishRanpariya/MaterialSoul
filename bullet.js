@@ -1,7 +1,7 @@
 class Bullet {
 
   constructor() {
-    this.r = 40 * scl;
+    this.r = 20;
     this.pos = createVector(width / 2, height / 2);
     this.vel = createVector(random() + 0.3, random() + 0.5);
     this.vel.normalize();
@@ -41,14 +41,14 @@ class Bullet {
     }
   }
   render() {
-    image(bulletimg[0], this.pos.x, this.pos.y, this.r * 2.3, this.r * 2.3);
-    //  fill(0,100);
-    // ellipse(this.pos.x, this.pos.y, this.r * 2);
-
+    colorMode(RGB);
+    fill(col);
+    ellipse(this.pos.x, this.pos.y, this.r * 2);
   }
   hits(ship) {
 
     if (ship.pos.y - ship.h / 2 < this.pos.y + this.r && this.pos.x < ship.pos.x + ship.w / 2 && this.pos.x > ship.pos.x - ship.w / 2 && this.pos.y < ship.pos.y) {
+
       snap.play();
       this.vel.y = -abs(this.vel.y);
       this.pos.y += this.vel.y;
@@ -67,7 +67,7 @@ class Bullet {
 
         this.vel.y *= -1;
       }
-      this.score += 10;
+      this.score += floor(star.r/5);
       pling.play();
       return true;
 
@@ -81,9 +81,9 @@ class Bullet {
       this.pos = createVector(width / 2, height / 2);
 
     } else {
-      toggle();
-      restart();
       gameovershow();
+      // restart();
+      toggle();
       //game is over 
     }
 

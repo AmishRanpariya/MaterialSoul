@@ -1,25 +1,124 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en" class="is_dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Material Soul</title>
+  <link rel="icon" href="./Assets/icons/icon-filled-1080x1080.png" type="image/x-icon">
+  
+  <!--pwa things -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="./Assets/icons/icon-1080x1080.png">
+  <link rel="mask-icon" href="./Assets/icons/icon-1080x1080.png" />
+  <meta name="theme-color" content="#1E202A" />
+  <meta name="apple-mobile-web-app-status-bar" content="#1E202A">
+  <meta name="msapplication-TileColor" content="#1E202A" />
+  <meta name="theme-color" content="#1E202A" />
+  
+  <meta name="title" content="Material Soul | Minimal Web Game" />
+  <meta name="description" content="A simple lightweight in-browser web app with colorful themes and installable game. Fun to Play." />
+  <meta name="keywords" content="game, pwa, dark ui, light ui, bricks-breaker, breaker, lightweight, minimal, opensource" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://amishranpariya.github.io/MaterialSoul/" />
+  <meta property="og:title" content="Material Soul | Minimal Web Game" />
+  <meta property="og:description" content="A simple lightweight in-browser web app with colorful themes and installable game. Fun to Play." />
+  <meta property="og:image" content="https://amishranpariya.github.io/MaterialSoul/Assets/icons/icon-filled-512x512.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://amishranpariya.github.io/MaterialSoul/" />
+  <meta property="twitter:title" content="Material Soul | Minimal Web Game" />
+  <meta property="twitter:description" content="A simple lightweight in-browser web app with colorful themes and installable game. Fun to Play." />
+  <meta property="twitter:image" content="https://amishranpariya.github.io/MaterialSoul/Assets/icons/icon-filled-512x512.png" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
   <script src="p5.js"></script>
   <script src="p5.sound.min.js"></script>
-  <title>Material Soul</title> 
-  <link rel="icon" href="./Assets/Img/MaterialSoulLogo.png" type="image/x-icon">
- 
-  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <meta charset="utf-8">
 </head>
 
 <body id="body">
-
+  <div id="loader"></div>
+  <div class="container">
+    <header>
+      <div class="left">
+        <div class="score-div">
+          <div>
+            <img src="./Assets/Img/Coin/coin_01.png" alt="" />
+          </div>
+          <p id="coin">0</p>
+        </div>
+        <div class="diamond-div">
+          <div>
+            <img src="./Assets/Img/Coin/tileRed_16.png" alt="" />
+          </div>
+          <p id="diamond">0</p>
+        </div>
+      </div>
+      <div class="middle">
+        <i class="fas fa-heart fa-2x h1 life"></i>
+        <i class="fas fa-heart fa-2x h2 life"></i>
+        <i class="fas fa-heart fa-2x h3 life"></i>
+      </div>
+      <div class="right">
+        <a class="btn" id="setting-btn"><i class="fas fa-cog fa-2x"></i>
+        </a>
+      </div>
+    </header>
+    <div class="hero intro">
+      <div class="wrapper">
+        <h1>Material Soul</h1>
+        <div class="lower-hero">
+          <a class="btn play"><i class="fas fa-play fa-3x"></i></a>
+          <p>Made with ❤️ by Amish</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero gameover">
+      <div class="wrapper">
+        <h1>Game Over</h1>
+        <div class="lower-hero">
+          <div class="btn-panel">
+            <a class="btn restart"><i class="fas fa-sync-alt fa-3x"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero settings">
+      <div class="wrapper">
+        <h1>Settings</h1>
+        <div class="lower-hero">
+          <div class="dark-mode-div">
+            <p>Dark Mode</p>
+            <div class="switch">
+              <input id="theme-type" type="checkbox" class="switch-input" />
+              <label for="theme-type" class="switch-label"></label>
+            </div>
+          </div>
+          <div class="btn-panel">
+            <a class="btn restart"><i class="fas fa-sync-alt fa-3x"></i>
+              <a class="btn play"><i class="fas fa-play fa-3x"></i></a>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
   <script src="sketch.js"></script>
   <script src="ship.js"></script>
   <script src="gems.js"></script>
   <script src="star.js"></script>
   <script src="bullet.js"></script>
+  <script src="darkmode.js"></script>
+</body>
 
-
-
-
-
-
-</body></html>
+</html>

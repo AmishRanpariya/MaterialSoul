@@ -1,7 +1,7 @@
 class Gem {
   constructor(x, y) {
     this.pos = createVector(x, y);
-    this.vel = createVector(0, -sml / 2000);
+    this.vel = createVector(0, -2);
     this.acc = createVector(0, 0.5);
 
   }
@@ -16,12 +16,12 @@ class Gem {
   render() {
     push();
     translate(this.pos.x, this.pos.y);
-    image(spepointimg, 0, 0, 70 * scl, 60 * scl);
+    image(diamond_img, 0, 0, 35, 30);
     pop();
   }
 
   hit(ship) {
-    if (this.pos.y + 25 * scl > ship.pos.y - ship.h / 2 && abs(this.pos.x - ship.pos.x) < ship.w) {
+    if (this.pos.y + 15 > ship.pos.y - ship.h / 2 && abs(this.pos.x - ship.pos.x) < ship.w ) {
       return true;
     }
     return false;
