@@ -19,7 +19,8 @@
   --Col-Text-1: hsl(228, 12%, 44%);
   --Col-Text-2: hsl(230, 17%, 14%);
   --Col-Toggle-hover: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
-
+  --Col-glass-dark: rgba(100, 100, 100, 0.05);
+  --Col-glass-dark-border: hsla(227, 40%, 90%, 0.5);
   --Font-size: 14px;
   --Family: 'Inter', sans-serif;
   /* - Weights: 400, 700 */
@@ -35,6 +36,9 @@ html.is_dark {
   --Col-Card-BG-hover: hsl(228, 28%, 30%);
   --Col-Text-1: hsl(228, 34%, 66%);
   --Col-Text-2: hsl(0, 0%, 100%);
+  --Col-glass-dark: rgba(255, 255, 255, 0.04);
+  --Col-glass-dark-border: hsla(228, 28%, 30%, 0.5);
+
 }
 
 * {
@@ -42,7 +46,7 @@ html.is_dark {
   /* z-index: 1; */
   margin: 0;
   padding: 0;
-  transition: all 0.02s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
 
   -webkit-touch-callout: none;
@@ -70,49 +74,46 @@ body {
   /* z-index: -11; */
 }
 
-@keyframes rotate{
+@keyframes rotate {
   0% {
     transform: scale(3) rotate(0deg);
   }
-  25%{
+
+  25% {
     transform: scale(3.5) rotate(0deg);
-    
+
   }
-  50%{
+
+  50% {
     transform: scale(3.5) rotate(60deg);
-    
+
   }
-  75%{
+
+  75% {
     transform: scale(3) rotate(60deg);
   }
+
   100% {
     transform: scale(3) rotate(0deg);
   }
 }
+
 #loader {
-  animation:  rotate 3s   infinite;
-  background: var(--Col-BG) url(./Assets/hexagon-1.svg) center no-repeat;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 999999;
+  z-index: 9999;
+  animation: rotate 3s infinite;
+  background: var(--Col-BG) url(./Assets/hexagon-1.svg) center no-repeat;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+a {
+  color: var(--Col-Text-1);
+  text-decoration: none;
+  font-size: 1.1rem;
+}
 
 canvas {
   display: block;
@@ -188,12 +189,34 @@ header {
   padding: 3.5rem 0rem;
 }
 
+.hero {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  border-radius: 2rem;
+  background: var(--Col-glass-dark);
+  backdrop-filter: blur(40px);
+  /* border:4px solid var(--Col-glass-dark-border); */
+  border: 4px solid transparent;
+  /* border:4px solid #ffffff00; */
+  background-clip: padding-box;
+  box-shadow: 0 10px 50px -20px #22222230;
+  /* transition: all 1s cubic-bezier(0.19, 1, 0.22, 1); */
+  transition: all 0.2s cubic-bezier(0.86, 0, 0.07, 1);
+  /* transition: all 1s cubic-bezier(0.23, 1, 0.320, 1); */
+}
+
+.hide {
+
+  left: -230%;
+}
+
 .hero h1 {
   width: 100%;
   font-size: 2.5rem;
   font-weight: 700;
   padding-bottom: 1rem;
-  border-bottom: 1.2px solid var(--Col-BG);
+  /* border-bottom: 1.2px solid var(--Col-BG); */
 }
 
 .wrapper {
@@ -226,17 +249,101 @@ header {
 }
 
 .settings .wrapper .lower-hero>div {
-  min-width: 40%;
+  min-width: 50%;
   max-width: 80%;
   margin: auto;
 }
 
-.dark-mode-div {
+.dark-mode-div,
+.theme-div {
   display: flex;
   gap: 1rem;
   align-items: center;
   justify-content: space-between;
 }
+
+.theme-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 1000px;
+  border: 0.1px solid #000;
+
+}
+
+.theme-btn:hover {
+  transform: scale(1.5);
+}
+
+.theme-btn.applied {
+  border: 3px solid var(--Col-Text-1);
+
+}
+
+/* colors = [
+    color("#d0004e")338,
+    color("#00b188")166,
+    color("#0055fb")220,
+    color("#ff784b")15,
+    color("#d250f6")287,
+    color("#7854f7")253,
+    color("#ff7d7d")0,
+    color("#12a5ed")200,
+    color("#ffca00")48,
+    color("#7ed321")89,
+    color("#f5325b")347,
+    color("#ff8400")31,
+    color("#06c1ff")195
+    ];
+  // colors = [
+  //   color("#e66bba")321,
+  //   color("#3b3086")248,
+  //   color("#ffc2c0")2,
+  //   color("#fae0db")10,
+  //   color("#7291f9")226
+  // ];
+  // colors = [
+  //   color("#d07499")336,
+  //   color("#f88999")351,
+  //   color("#b9c4e3")224,
+  //   color("#808fba")224
+  // ];
+  // colors = [
+  //   color("#ffb997"),
+  //   color("#f67e7d"),
+  //   color("#843b62"),
+  //   color("#0b032d"),
+  //   color("#621940")
+  // ]; */
+
+#d0004e {
+  background: linear-gradient(45deg,
+      #ff7d7d,
+      #ff784b,
+      #ff8400,
+      #ffca00,
+      #7ed321,
+      #00b188,
+      #06c1ff,
+      #12a5ed,
+      #0055fb,
+      #7854f7,
+      #d250f6,
+      #d0004e,
+      #f5325b);
+}
+
+#e66bba {
+  background: linear-gradient(45deg, #3b3086, #7291f9, #fae0db, #ffc2c0, #e66bba);
+}
+
+#d07499 {
+  background: linear-gradient(45deg, #d07499, #f88999, #b9c4e3, #808fba);
+}
+
+#ffb997 {
+  background: linear-gradient(45deg, #ffb997, #f67e7d, #843b62, #0b032d, #621940);
+}
+
 
 .btn-panel {
   display: flex;
@@ -251,7 +358,8 @@ header {
 }
 
 .btn:hover,
-p:hover {
+p:hover,
+a:hover {
   color: var(--Col-Text-2);
   transform: scale(1.1);
 }

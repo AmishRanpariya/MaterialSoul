@@ -9,6 +9,13 @@ const setting_btn = document.querySelector("#setting-btn");
 const play_btns = document.querySelectorAll(".play");
 const restart_btns = document.querySelectorAll(".restart");
 
+const col_d0004e_btn = document.querySelector("#d0004e");
+const col_e66bba_btn = document.querySelector("#e66bba");
+const col_d07499_btn = document.querySelector("#d07499");
+const col_ffb997_btn = document.querySelector("#ffb997");
+
+
+
 //popups/models
 const intro_model = document.querySelector(".hero.intro");
 const settings_model = document.querySelector(".hero.settings");
@@ -41,7 +48,8 @@ let gems = [];
 let diamond_img;
 
 let col; //color of ship and bullet
-
+let colors;
+let col_d0004e, col_e66bba, col_d07499, col_ffb997;
 //sounds
 let success;
 let pling;
@@ -97,6 +105,11 @@ function setup() {
     // }
   });
 
+  col_d0004e_btn.addEventListener("click", ()=>{setColor(col_d0004e);});
+  col_e66bba_btn.addEventListener("click", ()=>{setColor(col_e66bba);});
+  col_d07499_btn.addEventListener("click",()=>{ setColor(col_d07499);});
+  col_ffb997_btn.addEventListener("click", ()=>{setColor(col_ffb997);});
+
 
   sml = width < height ? width : height;
 
@@ -110,6 +123,47 @@ function setup() {
   noStroke();
 
   col = color(125);
+  colorMode(HSL, 360, 100, 100);
+  col_d0004e = [
+    color("#d0004e"),
+    color("#00b188"),
+    color("#0055fb"),
+    color("#ff784b"),
+    color("#d250f6"),
+    color("#7854f7"),
+    color("#ff7d7d"),
+    color("#12a5ed"),
+    color("#ffca00"),
+    color("#7ed321"),
+    color("#f5325b"),
+    color("#ff8400"),
+    color("#06c1ff")
+    ];
+  
+
+  col_e66bba = [
+   color("#e66bba"),
+    color("#3b3086"),
+    color("#ffc2c0"),
+   color("#fae0db"),
+    color("#7291f9")
+  ];
+
+  col_d07499 = [
+     color("#d07499"),
+    color("#f88999"),
+    color("#b9c4e3"),
+    color("#808fba")
+   ];
+  col_ffb997 = [
+     color("#ffb997"),
+    color("#f67e7d"),
+     color("#843b62"),
+     color("#0b032d"),
+     color("#621940")
+  ];
+
+
 
   //initializations
   ship = new Ship();
@@ -119,6 +173,16 @@ function setup() {
   }
 
 
+  noLoop();
+  setColor(col_ffb997);
+}
+
+function setColor(color_array) {
+  colors = color_array;
+  stars.forEach(star=>{
+    star.updateColor();
+  })
+  loop();
   noLoop();
 }
 
@@ -144,6 +208,7 @@ function updateLife(n) {
 function gameovershow() {
   closeAllModels();
   gameover_model.style.display = "block";
+  gameover_model.classList.remove("hide");
   restart();
 }
 
@@ -151,13 +216,17 @@ function gameovershow() {
 function settingsShow() {
   closeAllModels();
   settings_model.style.display = "block";
+  settings_model.classList.remove("hide");
 }
 
 //closing all models
 function closeAllModels() {
-  settings_model.style.display = "none";
-  intro_model.style.display = "none";
-  gameover_model.style.display = "none";
+  // settings_model.style.display = "none";
+  // intro_model.style.display = "none";
+  // gameover_model.style.display = "none";
+  settings_model.classList.add("hide");
+  intro_model.classList.add("hide");
+  gameover_model.classList.add("hide");
 }
 
 
@@ -181,11 +250,11 @@ function toggle(type) {
 
 
 function restart() {
-  
+
   //delete old
   delete ship;
   delete bullet;
-  stars.splice(0, 10);
+  stars.splice(0, stars.length);
 
   //create new
   ship = new Ship();
@@ -193,8 +262,8 @@ function restart() {
   for (let i = 0; i < 10; i++) {
     stars.push(new Star(random(min_star_size, max_star_size)));
   }
-  
-  
+
+
   starttrack.play();
 }
 
@@ -229,7 +298,7 @@ function doubleClicked() {
 
 
 function draw() {
-  if (frameCount > 1) {
+  if (frameCount > 0) {
     clear();
 
     //about ship
