@@ -3,7 +3,7 @@ class Ship {
 
     this.pos = createVector(width / 2, height * 0.9);
     this.w = sml / 4;
-    this.h = this.w / 3.5;
+    this.h = this.w / 4;
     this.vel = 0;
   }
   update() {

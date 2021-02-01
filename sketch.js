@@ -122,7 +122,7 @@ function setup() {
   noFill();
   noStroke();
 
-  col = color(125);
+  col = color("#8B97C6");
   colorMode(HSL, 360, 100, 100);
   col_d0004e = [
     color("#d0004e"),

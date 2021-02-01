@@ -5,8 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QVMED0VBLB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QVMED0VBLB');
+</script>
+
+
   <title>Material Soul</title>
-  <link rel="icon" href="./Assets/icons/icon-filled-1080x1080.png" type="image/x-icon">
+  <link rel="icon" href="./Assets/icons/icon-1080x1080.png" type="image/x-icon">
+  
   <!--pwa things -->
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="./Assets/icons/icon-1080x1080.png">
@@ -15,26 +27,33 @@
   <meta name="apple-mobile-web-app-status-bar" content="#1E202A">
   <meta name="msapplication-TileColor" content="#1E202A" />
   <meta name="theme-color" content="#1E202A" />
+  
+  
   <meta name="title" content="Material Soul | Minimal Web Game" />
   <meta name="description" content="A simple lightweight in-browser web app with colorful themes and installable game. Fun to Play." />
-  <meta name="keywords" content="game, pwa, dark ui, light ui, bricks-breaker, breaker, lightweight, minimal, opensource" />
+  <meta name="keywords" content="Material, MaterialSoul, material, soul, github, free,  amishranpariya, amish, ranpariya, game, pwa, dark ui, light ui, bricks-breaker, breaker, lightweight, minimal, opensource" />
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://amishranpariya.github.io/MaterialSoul/" />
   <meta property="og:title" content="Material Soul | Minimal Web Game" />
   <meta property="og:description" content="A simple lightweight in-browser web app with colorful themes and installable game. Fun to Play." />
-  <meta property="og:image" content="https://amishranpariya.github.io/MaterialSoul/Assets/icons/icon-filled-512x512.png" />
+  <meta property="og:image" content="https://amishranpariya.github.io/MaterialSoul/Assets/icons/icon-512x512.png" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="512" />
   <meta property="og:image:height" content="512" />
+  
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://amishranpariya.github.io/MaterialSoul/" />
   <meta property="twitter:title" content="Material Soul | Minimal Web Game" />
   <meta property="twitter:description" content="A simple lightweight in-browser web app with colorful themes and installable game. Fun to Play." />
-  <meta property="twitter:image" content="https://amishranpariya.github.io/MaterialSoul/Assets/icons/icon-filled-512x512.png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <meta property="twitter:image" content="https://amishranpariya.github.io/MaterialSoul/Assets/icons/icon-512x512.png" />
+  
+<!--   fontawesome --> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
   <script src="p5.js"></script>
   <script src="p5.sound.min.js"></script>
+  
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -45,13 +64,13 @@
       <div class="left">
         <div class="score-div">
           <div>
-            <img src="./Assets/Img/Coin/coin_01.png" alt="" />
+            <img src="./Assets/Img/Coin/coin_01.png" alt="coin-img" />
           </div>
           <p id="coin">0</p>
         </div>
         <div class="diamond-div">
           <div>
-            <img src="./Assets/Img/Coin/tileRed_16.png" alt="" />
+            <img src="./Assets/Img/Coin/tileRed_16.png" alt="diamond" />
           </div>
           <p id="diamond">0</p>
         </div>
@@ -71,8 +90,9 @@
       <div class="wrapper">
         <h1>Material Soul</h1>
         <div class="lower-hero">
-          <a class="btn play"><i class="fas fa-play fa-3x"></i></a>
-          <a href="https://github.com/AmishRanpariya/MaterialSoul">Made with ❤️ by Amish</a>
+          <a class="btn play"><i class="fas fa-play fa-3x"></i>
+          </a>
+          <a href="https://github.com/AmishRanpariya">Made with ❤️ by Amish</a>
         </div>
       </div>
     </div>
@@ -107,8 +127,10 @@
             </div>
           </div>
           <div class="btn-panel">
-            <a class="btn restart"><i class="fas fa-sync-alt fa-3x"></i>
-              <a class="btn play"><i class="fas fa-play fa-3x"></i></a>
+            <a class="btn" href="https://github.com/AmishRanpariya/MaterialSoul"><i class="fas fa-info-circle fa-3x"></i>
+            </a>
+            <a class="btn restart"><i class="fas fa-sync-alt fa-3x"></i></a>
+            <a class="btn play"><i class="fas fa-play fa-3x"></i>
             </a>
           </div>
         </div>
