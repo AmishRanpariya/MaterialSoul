@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://amishranpariya.github.io/MaterialSoul/ " rel="noopener">
- <img style=" border-radius: 10px; " width=200px height=200px src="./Assets/icons/icon-filled-1080x1080.png" alt="Project logo"></a>
+ <img style=" border-radius: 10px; " width=200px height=200px src="./Assets/icons/icon-1080x1080.png" alt="Project logo"></a>
 </p>
 <h1 align="center">Material Soul</h1>
 

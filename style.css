@@ -5,10 +5,10 @@
   /* --Col-Lime-Green: hsl(163, 72%, 41%); */
   --Col-Bright-Red: hsl(356, 69%, 56%);
 
-  --Col-Facebook: hsl(208, 92%, 53%);
-  --Col-Twitter: hsl(203, 89%, 53%);
-  --Col-Instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
-  --Col-YouTube: hsl(348, 97%, 39%);
+  /* --Col-Facebook: hsl(208, 92%, 53%); */
+  /* --Col-Twitter: hsl(203, 89%, 53%); */
+  /* --Col-Instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)); */
+  /* --Col-YouTube: hsl(348, 97%, 39%); */
 
   /* #### Light Theme */
   --Col-Toggle: hsl(230, 22%, 74%);
@@ -43,7 +43,6 @@ html.is_dark {
 
 * {
   box-sizing: border-box;
-  /* z-index: 1; */
   margin: 0;
   padding: 0;
   transition: all 0.2s ease-in-out;
@@ -78,21 +77,15 @@ body {
   0% {
     transform: scale(3) rotate(0deg);
   }
-
   25% {
     transform: scale(3.5) rotate(0deg);
-
   }
-
   50% {
     transform: scale(3.5) rotate(60deg);
-
   }
-
   75% {
     transform: scale(3) rotate(60deg);
   }
-
   100% {
     transform: scale(3) rotate(0deg);
   }
@@ -108,6 +101,11 @@ body {
   animation: rotate 3s infinite;
   background: var(--Col-BG) url(./Assets/hexagon-1.svg) center no-repeat;
 }
+
+
+
+
+
 
 a {
   color: var(--Col-Text-1);
@@ -375,10 +373,6 @@ header .middle i:hover {
   position: relative;
   display: inline-block;
 }
-
-/* .switch:hover {
-  color: var(--Col-Text-2);
-} */
 
 .switch-input {
   display: none;
