@@ -63,6 +63,7 @@ class Bullet {
         this.vel.y *= -1;
       }
       this.score += floor(star.r/5);
+      pling.stop();
       pling.play();
       return true;
 

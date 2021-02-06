@@ -71,11 +71,11 @@ function preload() {
 
   diamond_img = loadImage('./Assets/Img/Coin/tileRed_16.png');
 
-  success = loadSound('./Assets/Sound/Success.mp3');
+  success = loadSound('./Assets/Sound/Successnew.ogg');
   pling = loadSound('./Assets/Sound/Pling.mp3');
   snap = loadSound('./Assets/Sound/Snap.mp3');
   starttrack = loadSound('./Assets/Sound/Fairy.mp3');
-  losetrack = loadSound('./Assets/Sound/Game2.mp3');
+  losetrack = loadSound('./Assets/Sound/Game2new.ogg');
 
 }
 
@@ -102,13 +102,12 @@ function setup() {
   setting_btn.addEventListener("click", () => {
     settingsShow();
     toggle("pause");
-    // }
   });
 
-  col_d0004e_btn.addEventListener("click", ()=>{setColor(col_d0004e);});
-  col_e66bba_btn.addEventListener("click", ()=>{setColor(col_e66bba);});
-  col_d07499_btn.addEventListener("click",()=>{ setColor(col_d07499);});
-  col_ffb997_btn.addEventListener("click", ()=>{setColor(col_ffb997);});
+  col_d0004e_btn.addEventListener("click", () => { setColor(col_d0004e); });
+  col_e66bba_btn.addEventListener("click", () => { setColor(col_e66bba); });
+  col_d07499_btn.addEventListener("click", () => { setColor(col_d07499); });
+  col_ffb997_btn.addEventListener("click", () => { setColor(col_ffb997); });
 
 
   sml = width < height ? width : height;
@@ -119,6 +118,12 @@ function setup() {
   angleMode(DEGREES);
   rectMode(CENTER);
   imageMode(CENTER);
+  let vol = 0.2;
+  success.setVolume(vol);
+  pling.setVolume(vol);
+  snap.setVolume(vol);
+  starttrack.setVolume(vol);
+  losetrack.setVolume(vol);
   noFill();
   noStroke();
 
@@ -139,7 +144,7 @@ function setup() {
     color("#ff8400"),
     color("#06c1ff")
     ];
-  
+
 
   col_e66bba = [
    color("#e66bba"),
@@ -179,7 +184,7 @@ function setup() {
 
 function setColor(color_array) {
   colors = color_array;
-  stars.forEach(star=>{
+  stars.forEach(star => {
     star.updateColor();
   })
   loop();
@@ -323,9 +328,6 @@ function draw() {
 
 
         if (stars[i].r > max_star_size / 2) {
-          // drop diamond if it hit bigger star
-          gems.push(new Gem(stars[i].pos.x, stars[i].pos.y));
-          //     stars.push(new Star(stars[i].r / 2));
 
           //also adding new star of its half a radius
           stars.push(new Star(stars[i].r / 2));
@@ -333,6 +335,8 @@ function draw() {
           //add random sized star if hits small star
           stars.push(new Star(random(min_star_size, max_star_size)));
         }
+        //droping diamond (gem)
+        gems.push(new Gem(stars[i].pos.x, stars[i].pos.y));
 
         //remove the hitted star
         stars.splice(i, 1);
@@ -346,6 +350,7 @@ function draw() {
       gems[i].update();
       if (gems[i].hit(ship)) {
         bullet.diamond++;
+        success.stop();
         success.play();
         gems.splice(i, 1);
       }
