@@ -14,8 +14,9 @@
 
 - 💻 **Material Soul** is a minimal bricks breaker like game.
 
-- 🌱It is created using **Javascript** and **p5.js**(framework)
+- 🌱 It is created using **Javascript** and **p5.js**(framework)
 
+- 🎛️ Added service worker to make installable on Mobile, Desktop and  Tablet for any OS.
 - 💬 Ping me about **Anything**, I'm glad to help you!😇
 
 - ⚡ Fun fact: It is created in mobile code editor and in-browser IDE of p5.js.
@@ -24,7 +25,7 @@
 
 ## 🏁 Getting Started 
 
-- First thing first, open the https://amishranpariya.github.io/MaterialSoul/ in any of your favourite browser.
+- First thing first, open the https://amishranpariya.github.io/MaterialSoul/ OR installed App.
 
 <p align="center">
 <img width=100% align="center"  alt="Img" src="./Assets/mockups/mock-orange.png" />
@@ -33,12 +34,18 @@
 - Now, Hit on the play button and break all the records!
 
 <p align="center">
-
 <img width=49% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-1.png" />
 <img width=49% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-2.png" />
 <img width=49% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-3.png" />
 <img width=49% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-4.png" />
-<img width=49% alt="Img" src="./Assets/mockups/app-mockup-android-5.png" />
+<img width=49% align="center" alt="Img" src="./Assets/mockups/app-mockup-android-5.png" />
+</p>
+
+- You can install the app as PWA using Chrome,Safari,Firefox and other browser.
+
+- Install on Mobile, Desktop, or Tablet.
+
+<p>
 <img width=49%  alt="Img" src="./Assets/mockups/app-mockup-android-6.png" />
 <!--<img width=30% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-1.png" />-->
 
@@ -53,7 +60,9 @@
 
 - [p5.js](https://editor.p5js.org/) - editor
  
- ---
+
+---
+
 ## 🎉 Acknowledgements 
 
 - Inspired by [@yining1023](https://github.com/yining1023) 
