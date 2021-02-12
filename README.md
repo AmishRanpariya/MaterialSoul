@@ -34,8 +34,8 @@
 - Now, Hit on the play button and break all the records!
 
 <p align="center">
-<img width=50% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-1.png" />
-<img width=50% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-2.png" />
+<img width=49% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-1.png" />
+<img width=49% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-2.png" />
 <img width=49% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-3.png" />
 <img width=49% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-4.png" />
 <img width=49% align="center" alt="Img" src="./Assets/mockups/app-mockup-android-5.png" />
