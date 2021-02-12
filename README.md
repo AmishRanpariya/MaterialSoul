@@ -27,19 +27,19 @@
 - First thing first, open the https://amishranpariya.github.io/MaterialSoul/ in any of your favourite browser.
 
 <p align="center">
-<img width=50% align="center"  alt="Img" src="./Assets/ScreenShots/editor.p5js.org_AmishRanpariya_present_4E3AXHOT0(Galaxy S5).png" />
+<img width=100% align="center"  alt="Img" src="./Assets/mockups/mock-orange.png" />
 </p>
 
 - Now, Hit on the play button and break all the records!
 
 <p align="center">
 
-<img width=30% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-1.png" />
-<img width=30% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-2.png" />
-<img width=30% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-3.png" />
-<img width=30% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-4.png" />
-<img width=30% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-5.png" />
-<img width=30% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-6.png" />
+<img width=49% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-1.png" />
+<img width=49% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-2.png" />
+<img width=49% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-3.png" />
+<img width=49% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-4.png" />
+<img width=49% alt="Img" src="./Assets/mockups/app-mockup-android-5.png" />
+<img width=49%  alt="Img" src="./Assets/mockups/app-mockup-android-6.png" />
 <!--<img width=30% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-1.png" />-->
 
 </p>
