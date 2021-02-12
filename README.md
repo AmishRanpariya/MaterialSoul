@@ -33,10 +33,15 @@
 - Now, Hit on the play button and break all the records!
 
 <p align="center">
-<img width=23% align="center"  alt="Img" src="./Assets/app-mockup-4.png" />
-<img width=23% align="center"  alt="Img" src="./Assets/app-mockup-1.png" />
-<img width=23% align="center"  alt="Img" src="./Assets/app-mockup-2.png" />
-<img width=23% align="center"  alt="Img" src="./Assets/app-mockup-3.png" />
+
+<img width=30% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-1.png" />
+<img width=30% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-2.png" />
+<img width=30% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-3.png" />
+<img width=30% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-4.png" />
+<img width=30% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-5.png" />
+<img width=30% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-6.png" />
+<!--<img width=30% align="center"  alt="Img" src="./Assets/mockups/app-mockup-android-1.png" />-->
+
 </p>
 
 - Fun tip: Click settings to change the themes and mode. Choose your favourite.😇
