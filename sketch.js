@@ -50,6 +50,7 @@ let diamond_img;
 let col; //color of ship and bullet
 let colors;
 let col_d0004e, col_e66bba, col_d07499, col_ffb997;
+
 //sounds
 let success;
 let pling;
@@ -118,7 +119,7 @@ function setup() {
   angleMode(DEGREES);
   rectMode(CENTER);
   imageMode(CENTER);
-  let vol = 0.2;
+  let vol = 0.1;
   success.setVolume(vol);
   pling.setVolume(vol);
   snap.setVolume(vol);

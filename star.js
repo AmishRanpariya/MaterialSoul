@@ -7,12 +7,12 @@ class Star {
     this.vel = random(-5, 5);
     this.col = random(colors);
   }
-  
+
   //updating color when theme color changes via user
-  updateColor(){
+  updateColor() {
     this.col = random(colors);
   }
-  
+
   render() {
     push();
     fill(this.col);

@@ -23,7 +23,7 @@ class Ship {
     // stroke(0);
     // strokeWeight(5);
 
-    rect(this.pos.x, this.pos.y, this.w, this.h,3000);
+    rect(this.pos.x, this.pos.y, this.w, this.h, 3000);
     // image(shipimg[0], this.pos.x, this.pos.y, this.w, this.h);
 
   }

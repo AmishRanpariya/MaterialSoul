@@ -19,7 +19,7 @@ class Gem {
   }
 
   hit(ship) {
-    if (this.pos.y + 15 > ship.pos.y - ship.h / 2 && abs(this.pos.x - ship.pos.x) < ship.w ) {
+    if (this.pos.y + 15 > ship.pos.y - ship.h / 2 && abs(this.pos.x - ship.pos.x) < ship.w) {
       return true;
     }
     return false;

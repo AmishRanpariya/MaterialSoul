@@ -11,7 +11,7 @@ class Bullet {
     this.score = 0;
     this.diamond = 0;
   }
-  
+
   update() {
     if (this.pos.y > height) {
       this.gameover();
@@ -31,7 +31,7 @@ class Bullet {
       this.vel.y = abs(this.vel.y);
       this.pos.x += this.vel.x;
       this.pos.y += this.vel.y;
-      
+
     } else {
       this.pos.x += this.vel.x;
       this.pos.y += this.vel.y;
@@ -51,7 +51,7 @@ class Bullet {
       this.pos.y += this.vel.y;
     }
   }
-  
+
   hitstar(star) {
     if (dist(this.pos.x, this.pos.y, star.pos.x, star.pos.y) <= this.r + star.r) {
 
@@ -62,7 +62,7 @@ class Bullet {
 
         this.vel.y *= -1;
       }
-      this.score += floor(star.r/5);
+      this.score += floor(star.r / 5);
       pling.stop();
       pling.play();
       return true;
@@ -70,7 +70,7 @@ class Bullet {
     } else
       return false;
   }
-  
+
   gameover() {
     this.life--;
     losetrack.play();
